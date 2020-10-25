@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Josefin Sans', sans-serif;
+	margin: 0;
+	background: url('images/bg-pattern-desktop.svg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+@media  screen and (min-width: 600px){
+
+.container {
+	display: flex;
+	min-height: 100vh;
+}
+
+.container .part1 {
+	  width: 55%;
+	  margin-left: 200px;
+	  margin-right: 50px;
+	  margin-top: 150px;
+	  
+	  
+}
+
+.container .part2 {
+	background: url('images/hero-desktop.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 45%;
+}
+
+.logo {
+	position: absolute;
+	margin-left: 200px;
+	padding-top: 40px;
+	width: 200px;
+}
+
+h1 {
+	text-transform: uppercase;
+	line-height: 1.2em;
+	letter-spacing: 0.5em;
+	font-size: 50px;
+	color: hsl(0, 36%, 70%);
+	animation: comeinleft 0.5s ease forwards;
+	transform: translateX(-100%);
+}
+ 
+h1 span {
+	color:black; 
+}
+
+p {
+	color: hsl(0, 36%, 70%);
+	line-height: 1.5em;
+	animation: comeinright 0.5s ease forwards;
+	transform: translateX(100%);
+}
+
+form {
+	position: relative;
+}
+
+
+button {
+	background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+	border: none;
+	outline: none;
+	padding: 12px;
+	border-radius: 50px;
+	width: 100px;
+	height: 55px;
+	position:  absolute;
+	top:0;
+	right:0;
+	box-shadow:0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	transition: opacity 0.2s ease;
+}
+
+form.error input {
+	border: 2px solid hsl(0, 93%, 68%);
+}
+
+button:hover{
+	opacity: 0.7;
+}
+
+input{
+	background-color: transparent;
+	border-radius: 50px;
+	width: 100%;
+	height: 55px;
+	border: 1px solid hsl(0, 36%, 70%);
+	padding: 15px 20px;
+	transform: translateX(-100%);
+	animation: comeinleft 0.5s ease forwards;
+}
+
+input:focus {
+	outline: none;
+}
+
+input::placeholder {
+	color: hsl(0, 36%, 70%);
+}
+
+.error-icon {
+	display: none;
+	position: absolute;
+	top: 15px;
+	right: 120px;
+}
+
+form.error .error-icon {
+	display: block;
+}
+small{
+	margin-top: 15px;
+	margin-left: 15px;
+	color: hsl(0, 93%, 68%);
+	display: none;
+}
+
+form.error small {
+	display: block;
+}
+
+@keyframes comeinleft {
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes comeinright {
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+}
+
+@media screen and (max-width: 600px) {
+
+	header {
+		position: absolute;
+		height: auto;
+		width: 100%;
+		padding: 30px;
+	}
+	header img {
+		width: 150px;
+	}
+	.container {
+		padding-top: 100px;
+		min-height: 100vh;
+		width: 100%;
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: flex-end;
+		align-items: center;
+		background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+		padding-bottom: 50px;
+	}
+	.container .part2 {
+		width: 100%;
+		padding: 50px 30px 0 30px;
+	}
+	.container .part2 {
+		width: 100%;
+		height: 300px;
+		background-image: url(./images/hero-mobile.jpg);
+		background-size: cover;
+	}
+	.container .part2 img {
+		width: 100%;
+		height: 100%;
+	}
+	.container .part1 h1 {
+		letter-spacing: .5rem;
+		text-align: center;
+		font-size: 3.2rem;
+		font-weight: 200;
+		text-transform: uppercase;
+		color: hsl(0, 36%, 70%);
+		line-height: 3.5rem;
+	}
+	.container .part1 h1 span {
+		color: hsl(0, 6%, 24%);
+		font-weight: 700;
+	}
+	.container .part1 p {
+		max-width: 450px;
+		text-align: center;
+		color: hsl(0, 36%, 70%);
+		font-size: .9rem;
+		line-height: 1.5rem;
+		margin: 20px auto 40px auto;
+	}
+
+	form {
+		position: relative;
+	}
+	
+	
+	button {
+		background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+		border: none;
+		outline: none;
+		padding: 12px;
+		border-radius: 50px;
+		width: 100px;
+		height: 55px;
+		position:  absolute;
+		top:0;
+		right:0;
+		box-shadow:0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	}
+	
+	form.error input {
+		border : 2px solid hsl(0, 93%, 68%);
+	}
+	
+	button:hover{
+		opacity: 0.7;
+	}
+	
+	input{
+		background-color: transparent;
+		border-radius: 50px;
+		width: 100%;
+		height: 55px;
+		border: 1px solid hsl(0, 36%, 70%);
+		padding: 15px 20px;
+	}
+	
+	input:focus {
+		outline: none;
+	}
+	
+	input::placeholder {
+		color: hsl(0, 36%, 70%);
+	}
+	
+	.error-icon {
+		display: none;
+		position: absolute;
+		top: 15px;
+		right: 120px;
+	}
+	
+	form.error .error-icon{
+		display: block;
+		visibility: visible;
+	}
+	
+	small{
+		margin-top: 15px;
+		margin-left: 15px;
+		color: hsl(0, 93%, 68%);
+		display: none;
+	}
+	
+	form.error small {
+		display: block;
+	}
+}
